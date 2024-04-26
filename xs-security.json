@@ -1,0 +1,28 @@
+{
+  "xsappname": "fio",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of called application",
+  "scopes": [
+    {
+      "name": "uaa.user",
+      "description": "UAA"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Token_Exchange",
+      "description": "UAA",
+      "scope-references": [
+        "uaa.user"
+      ]
+    }
+  ],
+  "oauth2-configuration": {
+    "token-validity": 900,
+    "redirect-uris": [
+      "https://a9a1b114trial-dev-lgl-dev-space-fio-approuter.cfapps.us10-001.hana.ondemand.com/",
+      "https://a9a1b114trial-qua-lgl-qua-space-fio-approuter.cfapps.us10-001.hana.ondemand.com",
+      "https://a9a1b114trial-pro-lgl-pro-space-fio-approuter.cfapps.us10-001.hana.ondemand.com"
+    ]
+  }
+}
